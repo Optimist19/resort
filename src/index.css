@@ -1,6 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
 * {
   margin: 0;
   padding: 0;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
 }
 
 .home {
@@ -22,15 +28,14 @@
   padding-top: 5vh;
 }
 
-
-.home-nav ul a{
-	color: aliceblue;
-	text-decoration: none;
+.home-nav ul a {
+  color: aliceblue;
+  text-decoration: none;
 }
 
 .home-nav li {
-	transition: all 0.5s ease-in-out;
-	text-transform: uppercase;
+  transition: all 0.5s ease-in-out;
+  text-transform: uppercase;
 }
 
 .home-nav li:hover {
@@ -71,15 +76,7 @@
   /* word-spacing: 2px; */
 }
 
-.welcome .time {
-  backdrop-filter: blur(10px);
-  background-color: rgba(0, 0, 0, 0.3);
-  height: 6vh;
-  width: 15vw;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+
 
 .rooms-nav {
   position: fixed;
@@ -95,8 +92,9 @@
 .rooms-nav div {
   display: flex;
   justify-content: space-between;
-  width: 25vw;
+  /* width: 25vw; */
   padding-left: 4vw;
+  gap: 0 3vw;
 }
 
 .rooms-nav div header {
@@ -125,6 +123,17 @@
   font-weight: bold;
 }
 
+.rooms-nav div ul li:nth-child(2){
+color: rgb(170, 130, 27);
+}
+
+.rooms-nav div ul li a{
+  text-decoration: none;
+  color: black
+}
+
+
+
 .rooms-main {
   padding-top: 18vh;
 }
@@ -135,21 +144,26 @@
   margin-bottom: 6vh;
 }
 
-.rooms-main .input-width{
+.rooms-main .input-width {
   width: 10vw;
 }
 
-.rooms-main .filter{
-    display: flex;
-    align-items: center;
-    justify-content:space-around;
-    width: 40vw;
-    margin: 0 auto;
-    gap: 0 3vw;
+.rooms-main .filter {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 40vw;
+  margin: 0 auto;
+  gap: 0 3vw;
 }
 
-.rooms-main .filter label{
+.rooms-main .filter label {
   display: block;
+}
+
+.rooms-main a{
+  color: #000000;
+  text-decoration: none;
 }
 
 .main-home .services-con {
@@ -192,10 +206,8 @@
   font-weight: bold;
 }
 
-
-
-.featured-rooms-con h2{
-	margin: 6vh 0;
+.featured-rooms-con h2 {
+  margin: 6vh 0;
 }
 
 .featured-rooms {
@@ -237,6 +249,100 @@
 .featured-rooms .p-img div img {
   width: 100%; /* Set the width to fill the container */
 }
+
+/* Dynamic Page */
+
+.dynamic-con {
+  width: 100%;
+  
+}
+
+.dynamic-con .backg {
+  font-size: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.dynamic-con .backg-p {
+width: 60%;
+padding: 4em 3em;
+margin: 0 auto;
+background-color: rgba(0, 0, 0, 0.3);
+}
+
+.dynamic-con .backg-p{
+  text-align: center;
+}
+
+.dynamic-con .first-p p, h1{
+  font-size: 2em;
+  font-weight: bold;
+  color: aliceblue;
+  text-transform: capitalize;
+}
+
+.dynamic-con .second-p a{
+  margin-top: 1em;
+  /* font-size: 1.5em; */
+  color: #000000;
+  text-decoration: none;
+}
+
+.dyn-main {
+  padding-top: 4%;
+  width: 80%;
+  margin: 0 auto;
+  line-height: 3vh;
+  /* background-color: aqua; */
+}
+
+.dyn-main .img-con{
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 0 2%;
+}
+
+.dyn-main .img-con img{
+width: 100%;
+}
+
+.dyn-main .details-info{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 3vw;
+  margin-top: 3vh;
+}
+
+.dyn-main .details-info h2{
+  font-weight: bold;
+  margin-bottom: 1vh;
+}
+
+
+
+
+.dyn-main .extras{
+  margin-top: 2%;
+
+}
+
+.dyn-main .extras h4{
+  font-weight: bold;
+  margin: 1vh 0;
+}
+
+.dyn-main .extras div{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-top: 3vh;
+  gap: 1vh 0;
+  padding-bottom: 3vh;
+}
+
 
 @keyframes slideBackground {
   0% {
@@ -316,5 +422,126 @@
     background-size: cover;
     background-blend-mode: multiply;
     background-color: rgba(0, 0, 0, 0.4);
+  }
+}
+
+
+@media screen and (max-width: 1144px){
+  
+  .rooms-nav div header {
+    border: none;
+    ;
+  }
+
+  .dyn-main .details-info p{
+    line-height: 23px;
+  }
+
+  .dyn-main .extras div{
+    
+    grid-template-columns: 1fr 1fr;
+    
+  }
+}
+
+
+
+@media screen and (max-width: 846px){
+
+  .dynamic-con .backg {
+    font-size: 20px;
+  }
+  
+  .dyn-main .details-info h2{
+   font-size: 1.3em;
+  }
+
+  .dyn-main .details-info p{
+   font-size: 0.9em;
+  }
+
+  .dynamic-con .first-p p, h1{
+    font-size: 1.5em;
+  }
+
+  .dyn-main .extras div{
+    font-size: 0.9em;
+    grid-template-columns: 1fr;
+
+  }
+}
+
+@media screen and (max-width: 746px){
+
+  .main-home .services {
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .main-home .services div .react-icon {
+    font-size: 25px;
+  }
+  .main-home .services-con p{
+    font-size: 14px;
+  }
+  
+  .main-home .services div h4 {
+    font-weight: bold;
+  }
+}
+
+@media screen and (max-width: 505px){
+
+
+  .welcome h2{
+    font-size: 20px;
+  }
+
+  .welcome h3{
+    font-size: 18px;
+  }
+
+  .welcome h4{
+    font-size: 12px;
+  }
+
+  .welcome h5{
+    font-size: 10px;
+  }
+
+  .welcome .time {
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.3);
+    /* width: none; */
+    padding: 1vh 1vw;
+    border-radius: 3px;
+  }
+
+  .rooms-nav div ul {
+    font-size: 0.7em;
+  }
+
+  .dynamic-con .backg {
+    font-size: 15px;
+  }
+  
+  .dyn-main .details-info h2{
+   font-size: 1em;
+  }
+
+  .dyn-main .details-info p{
+   font-size: 0.6em;
+  }
+
+  .dynamic-con .first-p p, h1{
+    font-size: 1em;
+  }
+
+  .dyn-main .extras div{
+    font-size: 0.6em;
+  }
+  .dyn-main .details-info{
+    grid-template-columns: 1fr;
   }
 }
