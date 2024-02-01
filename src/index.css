@@ -493,6 +493,10 @@ width: 100%;
 
 @media screen and (max-width: 505px){
 
+  .rooms-main .filter label {
+    font-size: 10px;
+  }
+
 
   .welcome h2{
     font-size: 20px;
@@ -543,5 +547,12 @@ width: 100%;
   }
   .dyn-main .details-info{
     grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 505px){
+
+  .rooms-main .filter label {
+    font-size: 6px;
   }
 }
