@@ -5,7 +5,6 @@ import NavCom from "./NavCom";
 
 function Rooms() {
   const [data, setData] = useState(dataStore);
-  // const [dat, setDat] = useState("")
 
   const [value, setValue] = useState({
     guest: "",
@@ -69,12 +68,13 @@ function Rooms() {
 
             <select
               className="input-width"
-              onClick={() => roomType()}
+              // onClick={() => roomType()}
               id="roomtype"
               name="roomtype"
-              onChange={(e) =>
+              onChange={(e) => {
                 setValue({ ...value, [e.target.name]: e.target.value })
-              }
+                roomType();
+              }}
               value={value.roomtype}>
               <option value="all">all</option>
               <option value="double">double</option>
@@ -143,7 +143,7 @@ function Rooms() {
               id="breakFast"
               type="checkbox"
               onChange={(e) => {
-                const check = e.target.checked
+                const check = e.target.checked;
                 setValue({ ...value, [e.target.name]: check });
                 breakFastFtn(check);
               }}
